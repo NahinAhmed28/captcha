@@ -49,54 +49,7 @@
                             </div>
 
 
-{{--                            <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">--}}
-{{--                                <label class="col-md-4 control-label">Phone Number</label>--}}
 
-
-{{--                                <div class="col-md-6">--}}
-{{--                                    <input type="text" class="form-control" name="phone">--}}
-
-
-{{--                                    @if ($errors->has('phone'))--}}
-{{--                                        <span class="help-block">--}}
-{{--                                        <strong>{{ $errors->first('phone') }}</strong>--}}
-{{--                                    </span>--}}
-{{--                                    @endif--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="form-group{{ $errors->has('subject, ') ? ' has-error' : '' }}">--}}
-{{--                                <label class="col-md-4 control-label">Subject </label>--}}
-
-
-{{--                                <div class="col-md-6">--}}
-{{--                                    <input type="text" class="form-control" name="subject">--}}
-
-
-{{--                                    @if ($errors->has('subject'))--}}
-{{--                                        <span class="help-block">--}}
-{{--                                        <strong>{{ $errors->first('subject') }}</strong>--}}
-{{--                                    </span>--}}
-{{--                                    @endif--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-{{--                            <div class="form-group{{ $errors->has('message, ') ? ' has-error' : '' }}">--}}
-{{--                                <label class="col-md-4 control-label">Message </label>--}}
-
-
-{{--                                <div class="col-md-6">--}}
-
-
-{{--                                    <textarea  name="message" rows="4" cols="50"> </textarea>--}}
-
-{{--                                    @if ($errors->has('message'))--}}
-{{--                                        <span class="help-block">--}}
-{{--                                        <strong>{{ $errors->first('message') }}</strong>--}}
-{{--                                    </span>--}}
-{{--                                    @endif--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
                             <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                                 <label for="phone" class="col-md-4 control-label">Phone</label>
 

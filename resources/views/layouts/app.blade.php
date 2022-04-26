@@ -93,14 +93,6 @@
             });
         });
     </script>
-    <script>
-        function onSubmit() {
-            grecaptcha.ready(() => {
-                grecaptcha.execute('v3_site_key', {action: 'homepage'}).then((token) => {
-                ...
-                });
-            });
-        }
-    </script>
+
 </body>
 </html>
