@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Form;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use PHPUnit\Util\Xml\Validator;
 use Symfony\Component\Console\Input\Input;
 
@@ -37,7 +38,7 @@ class FormController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'name' => 'required',
             'email' => 'required',
             'phone' => 'required',
@@ -54,10 +55,6 @@ class FormController extends Controller
             'phone'=> $request->phone,
             'subject'=> $request->subject,
             'message'=> $request->message,
-            'g-recaptcha-response' => [
-                'required' => 'Please verify that you are not a robot.',
-                'captcha' => 'Captcha error! try again later or contact site admin.',
-            ],
 
         ]);
 
@@ -66,10 +63,10 @@ class FormController extends Controller
 
         if ($value)
         {
-            return back()->with('success', 'Your form has been added!');
+            return Redirect::back()->with('status', 'Your form info has been submitted');
         }
         else {
-            return back()->with('danger', 'Your form has been failed to be added!');
+            return Redirect::back()->with('danger', 'Your form info has been failed to be added!');
 
         }
     }

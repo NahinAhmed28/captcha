@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,9 @@ Route::resource('/form', FormController::class);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/admin/form', [App\Http\Controllers\Admin\Formcontroller::class, 'index'])->name('admin.form.index');
+});
